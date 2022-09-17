@@ -2,6 +2,14 @@ const router = require('express').Router();
 const { celebrate, Joi } = require('celebrate');
 const auth = require('../middlewares/auth');
 
+const validUrl = (url) => {
+  const regex = /^((ftp|http|https):\/\/)?(www\.)?([A-Za-zА-Яа-я0-9]{1}[A-Za-zА-Яа-я0-9-]*\.?)*\.{1}[A-Za-zА-Яа-я0-9-]{2,8}(\/([\w#!:.?+=&%@!\-/])*)?/g
+  if (regex.test(url)) {
+    return url
+  }
+  throw new Error ('Некорректный url')
+}
+
 const {
   getCards,
   createCard,
@@ -15,7 +23,7 @@ router.get('/cards', auth, getCards);
 router.post('/cards', auth, celebrate({
   body: Joi.object().keys({
     name: Joi.string().required().min(2).max(30),
-    link: Joi.string().required().pattern(/^(https?:\/\/)?([\w\.]+)\.([a-z]{2,6}\.?)(\/[\w\.]*)*\/?$/),
+    link: Joi.string().required().custom(validUrl),
   }),
 }), createCard);
 
