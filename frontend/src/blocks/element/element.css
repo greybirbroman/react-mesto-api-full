@@ -1,0 +1,18 @@
+.element {
+  margin: 0 auto;
+  min-width: 100%;
+  max-width: 282px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  transition: all .5s ease 0s;
+  cursor: pointer;
+}
+
+.element:hover {
+  transform: scale(1.02);
+}
+

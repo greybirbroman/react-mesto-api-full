@@ -1,0 +1,11 @@
+.popup__input-label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.popup__input-label:last-child {
+  margin-bottom: 0;
+}

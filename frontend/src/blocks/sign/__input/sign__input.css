@@ -1,0 +1,19 @@
+.sign__input {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #fff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 17px;
+  border: 0;
+  border-bottom: 2px solid #ccc;
+  background-color: black;
+  padding: 0;
+  padding-bottom: 13px;
+  margin: 0;
+  margin-bottom: 30px;
+}

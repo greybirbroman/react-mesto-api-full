@@ -1,0 +1,17 @@
+.menu__link {
+    text-decoration-line: none;
+    font-size: 18px;
+    line-height: 17px;
+    font-weight: normal;
+    color: #fff;
+  
+    padding: 0;
+    padding-left: 24px;
+    margin: 0;
+    transition: opacity .3s linear;
+}
+
+.menu__link:hover {
+    cursor: pointer;
+    opacity: .6;
+}

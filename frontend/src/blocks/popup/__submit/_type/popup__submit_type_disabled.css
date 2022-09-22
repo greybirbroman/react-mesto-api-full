@@ -1,0 +1,9 @@
+.popup__submit_type_disabled {
+  background-color: #F7F7F7;
+  color: #C6C6C6; /* Цвета из фигмы!) */
+  border: 1px solid #C6C6C6;
+}
+
+.popup__submit_type_disabled:hover {
+  cursor: default;
+}
