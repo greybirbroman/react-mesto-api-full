@@ -21,6 +21,7 @@ function ImagePopup({ card, onClose }) {
     return () => {
       document.removeEventListener("keydown", handleEscClose);
     };
+    // eslint-disable-next-line
   }, []); // эксперимент
 
   return (
