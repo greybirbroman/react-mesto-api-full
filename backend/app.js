@@ -36,12 +36,12 @@ mongoose.connect('mongodb://localhost:27017/mestodb', {
   useNewUrlParser: true,
   useUnifiedTopology: false,
 })
-.then(() => {
-  console.log('Successfull connection to MongoDB')
-})
-.catch(err => {
-  console.log('Error connection to MongoDB')
-});
+  .then(() => {
+    console.log('Successfull connection to MongoDB');
+  })
+  .catch((err) => {
+    console.log(`Error connection to MongoDB ${err}`);
+  });
 
 app.use(bodyParser.json());
 // Для приема веб-страниц внутри POST запроса
