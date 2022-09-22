@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:3000';
+export const BASE_URL = 'http://api.greybirb.nomoredomains.sbs';
 
 export const handleResponse = (res) => {
   if (res.ok) return res.json();
