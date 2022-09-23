@@ -8,8 +8,8 @@
 
 ## Ссылки на проект
 
-IP-адрес: 178.154.207.54
+IP 178.154.207.54
 
-Frontend https://greybirb.nomoredomains.sbs
+https://greybirb.nomoredomains.sbs
 
-Backend https://api.greybirb.nomoredomains.sbs
+https://api.greybirb.nomoredomains.sbs
