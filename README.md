@@ -10,6 +10,6 @@
 
 IP 178.154.207.54
 
-https://greybirb.nomoredomains.sbs
+Frontend https://greybirb.nomoredomains.sbs
 
-https://api.greybirb.nomoredomains.sbs
+Backend https://api.greybirb.nomoredomains.sbs
