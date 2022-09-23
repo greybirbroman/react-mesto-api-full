@@ -83,7 +83,6 @@ function App() {
       .then((cardsData) => {
         if (cardsData) console.log("CardsData_OK");
         setCards(cardsData)
-        console.log(cardsData)
       })
       .catch((error) => {
         console.log(`CardsData_ERR ${error}`);
