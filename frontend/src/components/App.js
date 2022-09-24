@@ -221,7 +221,6 @@ function App() {
       });
   }
 
-
   const tokenCheck = () => {
       const token = localStorage.getItem('jwt')
       if (!token) {
@@ -240,6 +239,11 @@ function App() {
         console.log('Переданный токен некорректен')
         setLoggedIn(false)
       })
+      api.getCards()
+      .then((res) => {
+       setCards(res)
+      })
+      .catch((err) => console.log(err))
   };
 
   useEffect(() => {
