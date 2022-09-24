@@ -59,38 +59,55 @@ function App() {
     }
   }, [isOpen]);
 
-  useEffect(() => {
-    api
-      .getUserInfo()
-      .then((userData) => {
-        if (userData) console.log("UserData_OK");
-        setCurrentUser({
-          name: userData.name,
-          about: userData.about,
-          avatar: userData.avatar,
-          _id: userData._id,
-        });
-      })
-      .catch((err) => {
-        console.log(`UserData_ERR ${err}`);
-      });
-  }, []);
+  // useEffect(() => {
+  //   api
+  //     .getUserInfo()
+  //     .then((userData) => {
+  //       if (userData) console.log("UserData_OK");
+  //       setCurrentUser({
+  //         name: userData.name,
+  //         about: userData.about,
+  //         avatar: userData.avatar,
+  //         _id: userData._id,
+  //       });
+  //     })
+  //     .catch((err) => {
+  //       console.log(`UserData_ERR ${err}`);
+  //     });
+  // }, []);
 
+  // useEffect(() => {
+  //   setIsLoading(true);
+  //   api
+  //     .getCards()
+  //     .then((cardsData) => {
+  //       if (cardsData) console.log("CardsData_OK");
+  //       setCards(cardsData)
+  //     })
+  //     .catch((error) => {
+  //       console.log(`CardsData_ERR ${error}`);
+  //     })
+  //     .finally(() => {
+  //       setIsLoading(false);
+  //     });
+  // }, []);
+
+// Читаем данные с сервера
   useEffect(() => {
-    setIsLoading(true);
-    api
-      .getCards()
-      .then((cardsData) => {
-        if (cardsData) console.log("CardsData_OK");
-        setCards(cardsData)
-      })
-      .catch((error) => {
-        console.log(`CardsData_ERR ${error}`);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  }, []);
+    setIsLoading(true)
+
+    Promise.all([api.getUserInfo(), api.getCards()])
+    .then(([userData, cardsData]) => {
+      setCurrentUser(userData)
+      setCards(cardsData)
+    })
+    .catch((error) => {
+      console.log(`DataLoading_ERR ${error}`)
+    })
+    .finally(() => {
+      setIsLoading(false)
+    })
+  }, [])
 
   function handleEditAvatarClick() {
     setEditAvatarPopupOpen(true);
