@@ -235,7 +235,7 @@ function App() {
           history.push('/')
         }
       })
-      .catch((err) => {
+      .catch(() => {
         console.log('Переданный токен некорректен')
         setLoggedIn(false)
       })
@@ -247,18 +247,17 @@ function App() {
   };
 
   useEffect(() => {
-    tokenCheck();
+    tokenCheck()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoggedIn]);
 
-  function handleRegister(email, password, resetForm) {
+  function handleRegister(email, password) {
     let messageText = "",
       imageLink = null;
 
     auth
       .registration(email, password)
       .then((res) => {
-        resetForm();
         history.push("/sign-in");
         messageText = "Вы успешно зарегестрировались!";
         imageLink = regSuccess;
@@ -280,15 +279,14 @@ function App() {
       });
   }
 
-  function handleLogin(email, password, resetForm) {
-    auth
+  function handleLogin(email, password) {
+    return auth
       .authorization(email, password)
       .then((data) => {
         if (data.token) {
           localStorage.setItem("jwt", data.token);
-          resetForm();
-          history.push("/");
           setLoggedIn(true);
+          history.push("/");
         }
       })
       .catch((err) => {
