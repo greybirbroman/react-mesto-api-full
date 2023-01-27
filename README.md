@@ -1,15 +1,46 @@
-[![Tests](https://github.com/greybirbroman/react-mesto-api-full/actions/workflows/tests.yml/badge.svg)](https://github.com/greybirbroman/react-mesto-api-full/actions/workflows/tests.yml)
-# react-mesto-api-full
-Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. Бэкенд расположите в директории `backend/`, а фронтенд - в `frontend/`. 
+
+<h1 align="center">Mesto-React (front+back)</h1>
+
+
+Репозиторий для приложения проекта `Mesto-React`, включающий фронтенд и бэкенд части приложения со следующими возможностями: 
++ **авторизация и регистрация пользователей;**
++ **операции с карточками:**
+    + добавление
+    + удаление
+    + изменение статуса
++ **изменение стутуса и аватара пользователя.**
+
+
+Бэкенд приложения расположен в директории `backend/`, а фронтенд - в `frontend/`. 
+
+<img src="./frontend/src/images/mainpage.png"/>
+
+___
+
+
+### Ссылка на макет:
+<a href="https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/JavaScript.-Sprint-12?node-id=4453%3A2&t=XdZyUJ6xxjmUTwvd-0"><img src="https://img.shields.io/badge/figma-F5F5F5?style=for-the-badge&logo=figma&logoColor=#F24E1E"/></a>
+___
+
+### Запуск проекта:
+1. Клонировать репозиторий
+```
+git clone https://github.com/greybirbroman/react-mesto-api-full.git
+```
+2. Установить зависимости
+```
+1. cd react-mesto-api-full/frontend
+2. npm ci
+```
+3. Запустить проект 
+```
+npm start
+```
+___
+
+### Планы по доработке:
++ Провести общий рефакторинг кода с учетом новых знаний библиотеки React;
++ Настроить адаптивность для планшетных и мобильных устройств;
++ Добавить пользователю возможнсть оставлять комментарий к карточке.
   
-Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
-
-Адрес репозитория: https://github.com/greybirb/react-mesto-api-full
-
-## Ссылки на проект
-
-IP 178.154.207.54
-
-Frontend https://greybirb.nomoredomains.sbs
-
-Backend https://api.greybirb.nomoredomains.sbs
+### Статус: проект сдан 
