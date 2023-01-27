@@ -1,6 +1,16 @@
 
 <h1 align="center">Mesto-React (front+back)</h1>
 
+![html](https://img.shields.io/badge/html-F5F5F5?style=for-the-badge&logo=html5&logoColor=#E34F26)
+![css](https://img.shields.io/badge/css-F5F5F5?style=for-the-badge&logo=css3&logoColor=0000FF) 
+![js](https://img.shields.io/badge/JavaScript-F5F5F5?style=for-the-badge&logo=JavaScript&logoColor=#F7DF1E)
+![react](https://img.shields.io/badge/React-F5F5F5?style=for-the-badge&logo=React&logoColor=#61DAFB)
+![node](https://img.shields.io/badge/Node.js-F5F5F5?style=for-the-badge&logo=Node.js&logoColor=#339933)
+![mongodb](https://img.shields.io/badge/mongodb-F5F5F5?style=for-the-badge&logo=mongodb&logoColor=#47A248)
+![express](https://img.shields.io/badge/express.js-F5F5F5?style=for-the-badge&logo=&logoColor=#000000)
+![webpack](https://img.shields.io/badge/webpack-F5F5F5?style=for-the-badge&logo=webpack&logoColor=#F05032)
+
+
 
 Репозиторий для приложения проекта `Mesto-React`, включающий фронтенд и бэкенд части приложения со следующими возможностями: 
 + **авторизация и регистрация пользователей;**
